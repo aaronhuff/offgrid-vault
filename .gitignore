@@ -25,10 +25,25 @@
 02_ENGINEERING/arduino/data/
 02_ENGINEERING/arduino/downloads/
 02_ENGINEERING/arduino/arduino-cli
-02_ENGINEERING/python_wheels/*.whl
+02_ENGINEERING/arduino/arduino-cli.yaml
+02_ENGINEERING/arduino/libraries/
+02_ENGINEERING/python_wheels/*
+!02_ENGINEERING/python_wheels/.gitkeep
+02_ENGINEERING/git_repos/*
+!02_ENGINEERING/git_repos/.gitkeep
+
+# Python Environments & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
 
 # OS & Temp Artifacts
 .DS_Store
 Thumbs.db
 *.tmp
 *.log
+*.swp
+*~

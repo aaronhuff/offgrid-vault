@@ -20,8 +20,10 @@
 *.apk
 *.AppImage
 *.iso
+*.img.xz
 *.tar.gz
 *.zip
+05_NAS_HORDE/
 
 # Hardware & Dev Toolchain Caches
 02_ENGINEERING/arduino/data/

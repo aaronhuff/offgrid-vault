@@ -1,0 +1,34 @@
+# ==============================================================================
+# Off-Grid Vault .gitignore
+# Only track code, configs, manifests, and documentation in Git.
+# Heavy binary downloads (ZIMs, GGUFs, wheels, ISOs) are managed by scripts.
+# ==============================================================================
+
+# Big Knowledge Archives
+*.zim
+*.zim.part
+
+# AI Models & Containers
+*.gguf
+*.bin
+*.onnx
+03_INTELLIGENCE/ollama_home/
+
+# Binary Installers & Apps
+*.apk
+*.AppImage
+*.iso
+*.tar.gz
+*.zip
+
+# Hardware & Dev Toolchain Caches
+02_ENGINEERING/arduino/data/
+02_ENGINEERING/arduino/downloads/
+02_ENGINEERING/arduino/arduino-cli
+02_ENGINEERING/python_wheels/*.whl
+
+# OS & Temp Artifacts
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

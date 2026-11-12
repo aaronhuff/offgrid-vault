@@ -30,7 +30,12 @@ fetch "https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stab
       "$DEST_DIR/isos/rescue/clonezilla-live-amd64.iso"
 
 echo "=== 2. Universal OS Installation ISOs ==="
-# Debian 12 (Bookworm) Netinst (~600MB)
+# Debian 12 (Bookworm) Full DVD-1 (~3.7GB - COMPLETE OFFLINE APT REPOSITORY)
+# When offline, mount this ISO or use 'apt-cdrom add' to install 10,000+ packages without internet!
+fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-12.8.0-amd64-DVD-1.iso" \
+      "$DEST_DIR/isos/linux/debian-12-DVD-1-amd64.iso"
+
+# Debian 12 (Bookworm) Netinst (~600MB - Minimal fallback)
 fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso" \
       "$DEST_DIR/isos/linux/debian-12-netinst-amd64.iso"
 

@@ -25,11 +25,20 @@
 
 # Binary Installers & Apps
 *.apk
+*.deb
 *.AppImage
 *.iso
 *.img.xz
 *.tar.gz
 *.zip
+00_BOOTSTRAP/packages/*
+!00_BOOTSTRAP/packages/.gitkeep
+!00_BOOTSTRAP/packages/*.md
+00_BOOTSTRAP/static_binaries/*
+!00_BOOTSTRAP/static_binaries/.gitkeep
+!00_BOOTSTRAP/static_binaries/*.md
+00_BOOTSTRAP/tools/*
+!00_BOOTSTRAP/tools/.gitkeep
 05_NAS_HORDE/
 
 # Hardware & Dev Toolchain Caches

@@ -16,16 +16,17 @@ USER_NAME="aaronhuff"
 echo "=== Off-Grid Vault -> Synology NAS Synchronization ==="
 echo "Source: $VAULT_DIR"
 
-# 1. Check if direct SSH to Synology NAS is authorized
-if ssh -o BatchMode=yes -o ConnectTimeout=3 "${USER_NAME}@${NAS_DIRECT_IP}" "true" 2>/dev/null; then
+# 1. Check if direct SSH AND rsync binary execution are authorized on Synology DSM
+if ssh -o BatchMode=yes -o ConnectTimeout=3 "${USER_NAME}@${NAS_DIRECT_IP}" "rsync --version" &>/dev/null; then
     TARGET_HOST="${NAS_DIRECT_IP}"
-    TARGET_PATH="/volume1/cold-vault"
-    echo "Mode: Direct Synology DSM SSH (${TARGET_HOST}:${TARGET_PATH})"
-# 2. Check if Raspberry Pi 5 storage gateway is reachable
+    TARGET_PATH="/volume1/nfs/cold-vault"
+    echo "Mode: Direct Synology DSM rsync (${TARGET_HOST}:${TARGET_PATH})"
+# 2. Check if Raspberry Pi 5 storage gateway is reachable (writes to identical /volume1/nfs/cold-vault)
 elif ssh -o BatchMode=yes -o ConnectTimeout=3 "${USER_NAME}@${GATEWAY_IP}" "true" 2>/dev/null; then
     TARGET_HOST="${GATEWAY_IP}"
     TARGET_PATH="/mnt/nas/cold-vault"
     echo "Mode: High-Speed Storage Gateway -> Synology NFS (${TARGET_HOST}:${TARGET_PATH})"
+    echo "      (Synology SSH is active, but DSM requires 'rsync' application privilege in Control Panel -> File Services -> rsync)"
 else
     echo "Error: Neither direct NAS (${NAS_DIRECT_IP}) nor gateway (${GATEWAY_IP}) is reachable with passwordless SSH."
     echo ""

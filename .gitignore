@@ -19,6 +19,7 @@
 # AI Models & Containers
 *.gguf
 *.bin
+*.raw
 *.onnx
 03_INTELLIGENCE/ollama_home/
 

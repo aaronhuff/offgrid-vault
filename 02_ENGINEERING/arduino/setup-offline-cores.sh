@@ -4,7 +4,7 @@
 # ==============================================================================
 set -euo pipefail
 
-VAULT_DIR="/var/home/aaronhuff/offgrid-vault"
+VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 ARDUINO_DIR="$VAULT_DIR/02_ENGINEERING/arduino"
 CLI_TAR="$VAULT_DIR/00_BOOTSTRAP/tools/arduino-cli_latest_Linux_64bit.tar.gz"
 

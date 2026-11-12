@@ -7,7 +7,7 @@ set -euo pipefail
 NAS_IP="${NAS_IP:-10.1.1.2}"
 NAS_USER="${NAS_USER:-aaronhuff}"
 NAS_PATH="${NAS_PATH:-/volume1/cold-vault}"
-VAULT_DIR="/var/home/aaronhuff/repos/offgrid-vault"
+VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 echo "=== Off-Grid Vault -> Synology NAS Sync ==="
 echo "Source : $VAULT_DIR"

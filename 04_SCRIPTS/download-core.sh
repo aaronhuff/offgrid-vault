@@ -4,7 +4,7 @@
 # ==============================================================================
 set -euo pipefail
 
-VAULT_DIR="/var/home/aaronhuff/offgrid-vault"
+VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 mkdir -p "$VAULT_DIR"/{00_BOOTSTRAP/{apks,appimages,tools},01_KNOWLEDGE/{zim,manuals_pdf,kindle_books},02_ENGINEERING/{arduino,datasheets,radio_chirp,git_repos},03_INTELLIGENCE/{models_3b,models_7b}}
 
 fetch() {

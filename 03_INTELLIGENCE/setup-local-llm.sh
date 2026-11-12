@@ -4,7 +4,7 @@
 # ==============================================================================
 set -euo pipefail
 
-VAULT_DIR="/var/home/aaronhuff/offgrid-vault"
+VAULT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MODELS_DIR="$VAULT_DIR/03_INTELLIGENCE"
 
 echo "=== Offline LLM Setup for Bluefin / Linux Laptop ==="

@@ -58,6 +58,10 @@ echo "=== 3. Hypervisor & Infrastructure Rebuild ISOs ==="
 fetch "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso" \
       "$DEST_DIR/isos/hypervisor/proxmox-ve_9.2-1.iso"
 
+# Talos Linux Bare-Metal ISO (~365MB - Immutable Kubernetes OS)
+fetch "https://github.com/siderolabs/talos/releases/download/v1.14.6/metal-amd64.iso" \
+      "$DEST_DIR/isos/hypervisor/talos-metal-amd64.iso"
+
 echo "=== 4. Single-Board Computer Images (RPi 500 & RPi 4B) ==="
 # Raspberry Pi OS 64-bit Lite (~500MB)
 fetch "https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2026-10-06/2026-10-06-raspios-trixie-arm64-lite.img.xz" \

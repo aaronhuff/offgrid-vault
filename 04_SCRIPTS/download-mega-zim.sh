@@ -40,7 +40,16 @@ fetch "https://download.kiwix.org/zim/other/appropedia_en_all_maxi_2026-02.zim" 
 fetch "https://download.kiwix.org/zim/wikivoyage/wikivoyage_en_all_maxi_2026-09.zim" \
       "$DEST_DIR/wikivoyage_en_all_maxi_2026-09.zim"
 
-echo "=== 2. The Crown Jewel: Full English Wikipedia ==="
+echo "=== 2. Offline Education & Foundational STEM Curriculum ==="
+# PhET Interactive Simulations: 100+ interactive physics, chemistry, biology, & math labs (~104MB)
+fetch "https://download.kiwix.org/zim/phet/phet_en_all_2026-08.zim" \
+      "$DEST_DIR/phet_en_all_2026-08.zim"
+
+# Wikibooks Maxi: Thousands of complete textbooks from elementary arithmetic to calculus, sciences, history (~4.4GB)
+fetch "https://download.kiwix.org/zim/wikibooks/wikibooks_en_all_maxi_2026-10.zim" \
+      "$DEST_DIR/wikibooks_en_all_maxi_2026-10.zim"
+
+echo "=== 3. The Crown Jewel: Full English Wikipedia ==="
 # Full English Wikipedia Maxi: All articles + full image set (~118.6GB)
 fetch "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_maxi_2026-08.zim" \
       "$DEST_DIR/wikipedia_en_all_maxi_2026-08.zim"

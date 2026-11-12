@@ -27,6 +27,7 @@ ssh "${NAS_USER}@${NAS_IP}" "mkdir -p '${NAS_PATH}'"
 echo "Starting synchronization..."
 rsync -avh --no-perms --no-owner --no-group --progress --delete \
     --exclude='02_ENGINEERING/arduino/downloads/' \
+    --exclude='05_NAS_HORDE/' \
     --exclude='*.tmp' \
     --exclude='.git/' \
     "$VAULT_DIR/" "${NAS_USER}@${NAS_IP}:${NAS_PATH}/"

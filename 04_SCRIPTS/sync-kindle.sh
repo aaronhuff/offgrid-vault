@@ -38,8 +38,9 @@ echo "Kindle detected at: $KINDLE_PATH"
 echo "Syncing books to : $TARGET_DOCS"
 echo "--------------------------------------------------------"
 
-# Sync all ePubs and PDFs
+# Sync all ePubs and PDFs (recursing into subfolders like classics/)
 rsync -avh --progress --modify-window=1 \
+    --include='*/' \
     --include='*.epub' \
     --include='*.azw3' \
     --include='*.kfx' \
@@ -51,6 +52,7 @@ rsync -avh --progress --modify-window=1 \
 if [[ -d "$MANUALS_DIR" ]]; then
     echo "Syncing field manuals..."
     rsync -avh --progress --modify-window=1 \
+        --include='*/' \
         --include='*.pdf' \
         --include='*.epub' \
         --exclude='*' \

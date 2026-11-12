@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # download-nas-horde.sh - The Deep Archive "Data Horde" Downloader
-# Designed for storage on high-capacity media or Synology NAS (/volume1/...)
+# Designed for storage directly on Synology NAS (/volume1/nfs/cold-vault/05_NAS_HORDE)
 # ==============================================================================
 set -euo pipefail
 
-DEST_DIR="${1:-/var/home/aaronhuff/repos/offgrid-vault/05_NAS_HORDE}"
+DEST_DIR="${1:-/volume1/nfs/cold-vault/05_NAS_HORDE}"
 mkdir -p "$DEST_DIR"/{isos/{rescue,linux,hypervisor,sbc},knowledge_maxi,firmware_drivers}
 
 fetch() {
     local url="$1"
     local dest="$2"
+    if [ -f "$dest" ] && [ -s "$dest" ]; then
+        echo "========================================================"
+        echo "Already exists: $(basename "$dest") ($(du -sh "$dest" | cut -f1))"
+        echo "Skipping download."
+        echo "========================================================"
+        return 0
+    fi
     echo "========================================================"
     echo "Fetching: $(basename "$dest")"
     echo "From    : $url"
@@ -22,7 +29,7 @@ fetch() {
 
 echo "=== 1. Core Rescue & Recovery ISOs ==="
 # SystemRescue: The ultimate Linux partition & disk recovery toolkit (~900MB)
-fetch "https://osdn.dl.osdn.net/systemrescuecd/systemrescue-11.02-amd64.iso" \
+fetch "https://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/11.02/systemrescue-11.02-amd64.iso" \
       "$DEST_DIR/isos/rescue/systemrescue-11.02-amd64.iso"
 
 # Clonezilla Live: Offline disk/partition bare-metal cloning (~400MB)
@@ -30,37 +37,31 @@ fetch "https://downloads.sourceforge.net/project/clonezilla/clonezilla_live_stab
       "$DEST_DIR/isos/rescue/clonezilla-live-amd64.iso"
 
 echo "=== 2. Universal OS Installation ISOs ==="
-# Debian 12 (Bookworm) Full DVD-1 (~3.7GB - COMPLETE OFFLINE APT REPOSITORY)
-# When offline, mount this ISO or use 'apt-cdrom add' to install 10,000+ packages without internet!
-fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-12.8.0-amd64-DVD-1.iso" \
-      "$DEST_DIR/isos/linux/debian-12-DVD-1-amd64.iso"
+# Debian 13 (Trixie) Full DVD-1 (~3.7GB - COMPLETE OFFLINE APT REPOSITORY)
+fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-13.7.0-amd64-DVD-1.iso" \
+      "$DEST_DIR/isos/linux/debian-13-DVD-1-amd64.iso"
 
-# Debian 12 (Bookworm) Netinst (~600MB - Minimal fallback)
-fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso" \
-      "$DEST_DIR/isos/linux/debian-12-netinst-amd64.iso"
+# Debian 13 (Trixie) Netinst (~600MB - Minimal fallback)
+fetch "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.7.0-amd64-netinst.iso" \
+      "$DEST_DIR/isos/linux/debian-13-netinst-amd64.iso"
 
 # Ubuntu 24.04 LTS (Noble Numbat) Server (~2.6GB)
-fetch "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso" \
-      "$DEST_DIR/isos/linux/ubuntu-24.04.1-live-server-amd64.iso"
+fetch "https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso" \
+      "$DEST_DIR/isos/linux/ubuntu-24.04-live-server-amd64.iso"
 
 # Alpine Linux Standard (Ultra-lightweight 200MB rescue/server)
 fetch "https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-standard-3.20.3-x86_64.iso" \
       "$DEST_DIR/isos/linux/alpine-standard-3.20.3-x86_64.iso"
 
 echo "=== 3. Hypervisor & Infrastructure Rebuild ISOs ==="
-# Proxmox VE 8 ISO (To rebuild pve1/pve2 from bare metal: ~1.3GB)
-fetch "https://enterprise.proxmox.com/iso/proxmox-ve_8.2-1.iso" \
-      "$DEST_DIR/isos/hypervisor/proxmox-ve_8.2-1.iso"
+# Proxmox VE 9 ISO (To rebuild pve1/pve2 from bare metal: ~1.4GB)
+fetch "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso" \
+      "$DEST_DIR/isos/hypervisor/proxmox-ve_9.2-1.iso"
 
 echo "=== 4. Single-Board Computer Images (RPi 500 & RPi 4B) ==="
-# Raspberry Pi OS 64-bit Lite (For headless recovery of RPi 4B / Pi 5: ~500MB)
-fetch "https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-10-28/2024-10-22-raspios-bookworm-arm64-lite.img.xz" \
-      "$DEST_DIR/isos/sbc/raspios-bookworm-arm64-lite.img.xz"
-
-echo "=== 5. Radio & Hardware Firmware Archives ==="
-# Quansheng UV-K5 popular open firmware releases (Egzumer / IJV)
-fetch "https://github.com/egzumer/uv-k5-firmware-custom/releases/download/v0.22/k5_v0.22.bin" \
-      "$DEST_DIR/firmware_drivers/quansheng_egzumer_v0.22.bin"
+# Raspberry Pi OS 64-bit Lite (~500MB)
+fetch "https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2026-10-06/2026-10-06-raspios-trixie-arm64-lite.img.xz" \
+      "$DEST_DIR/isos/sbc/raspios-trixie-arm64-lite.img.xz"
 
 echo "========================================================"
 echo "NAS Horde download manifest executed!"

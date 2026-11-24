@@ -12,7 +12,19 @@ A pure-DC, zero-wiring, grab-and-go disaster IT & communications bunker packed i
 
 ---
 
-## Complete 15L Bag Shopping List & Cost (CAD)
+## Tier 0: Pocket Comms & Knowledge Pouch (~$150 – $250 CAD, <1L)
+
+Drop a single **waterproof Faraday tablet pouch (~$20–$25 CAD)** into *any* existing bug-out bag—holds **90% of the survival capability** in the size of a paperback book:
+
+* **1× Dedicated Offline Android Phone** *(Moto G Power / XCover Pro / Oukitel WP23 — ~$80–$150, or $0 spare)* with a **128GB–512GB MicroSD (TF) card** holding the entire vault horde (Kiwix ZIMs, Organic Maps, PocketPal AI `1B`, ePubs/PDFs, `04_MORALE/`, and `00_BOOTSTRAP/` APKs/tools).
+* **1–2× Quansheng UV-K5(8)** *(~$35 ea)* + **foldable whip(s)** *(antennas detached)* — USB-C rechargeable voice comms, NOAA weather, FM radio, LED flashlight.
+* **1× Spare MicroSD + 2× $3 OTG Readers + short USB-C cable + 3.5mm wired earbuds** *(~$20)*.
+
+Recharges from whatever power bank or folding solar panel is already in your bug-out bag.
+
+---
+
+## Tier 1: Complete 15L Bag Shopping List & Cost (CAD)
 
 | Subsystem | Exact Item | Est. Price (CAD) | Notes / Repo Integration |
 | :--- | :--- | :--- | :--- |

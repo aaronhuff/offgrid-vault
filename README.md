@@ -9,7 +9,7 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on commodity ~300Wh LiFePO4 USB-C PD power + folding solar.
 2. **Salvage-Friendly & Gracefully Degradable:** No single server is a fatal point of failure. Phones, tablets, e-readers, and ThinkPads all work independently—and any salvaged Android, iPhone, Linux, or Windows machine can join and replicate the stack.
 3. **Organic Propagation:** No complex sync daemons. Spread files over **USB-C PD Travel Router (HTTP/FTP)**, **LocalSend** (cross-platform Wi-Fi AirDrop), **Bitchat/Briar** (BLE/Wi-Fi pod chat), and **MicroSD/USB + OTG adapters**.
-4. **Faraday-First Storage:** Store radios, laptops, phones, routers, and SSD/MicroSDs inside conductive Faraday pouches (antennas detached, cables unplugged) inside IP67 cases.
+4. **Faraday-First Storage:** Store cold spares, radios, phones, routers, and SSD/MicroSDs inside a **foam-lined steel ammo can (Fat-50 / 40mm)** (antennas detached, cables unplugged) for cheap, waterproof EMP protection.
 
 ---
 

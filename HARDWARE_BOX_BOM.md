@@ -9,7 +9,7 @@ A pure-DC, modular, Faraday-protected disaster IT & communications architecture 
 2. **Network = 5V USB-C PD Travel Router (GL.iNet):** Powers off *any* USB-C PD bank, Module B, or laptop port. Mounts a USB/SSD directly to serve **HTTP/FTP**, while supporting **LocalSend** and **Briar** over local Wi-Fi. *(ThinkPad hotspot works as fallback; Outdoor DC-PoE AP is optional base-camp gear.)*
 3. **Comms = GMRS/RF Voice + Pod Mesh:** **GMRS / UV-K5** with foldable whip antennas bridges pod-to-pod voice; **Bitchat (BLE)** and **Briar (BLE + local Wi-Fi)** handle pod-level SMS replacement; **LoRa (Meshtastic/MeshCore)** adds silent multi-mile text if needed.
 4. **Organic Propagation:** No complex sync daemons—files spread organically via **Router HTTP/FTP**, **LocalSend** (phone-to-phone), and **`sd32`/`usb128` sneaker-net**.
-5. **Faraday / EMP Protection:** Nothing survives if unshielded electronics fry first. All stored electronics/storage live inside **nested Faraday bags or a foam-lined steel ammo can** with **antennas detached and cables unplugged**.
+5. **Faraday / EMP Protection:** Nothing survives if unshielded electronics fry first. Use a **foam-lined steel ammo can (Fat-50 / 40mm)**—cheap, waterproof, and everywhere—with **antennas detached and cables unplugged**.
 
 ---
 
@@ -17,7 +17,7 @@ A pure-DC, modular, Faraday-protected disaster IT & communications architecture 
 
 | Module | Case / Enclosure | Est. Cost | Role |
 | :--- | :--- | :--- | :--- |
-| **Module A: Comms, Storage & Faraday Vault** | VEVOR `0.565 Cu.ft` (`13.39" × 9.25" × 4.96"`) + Faraday pouches | **~$280 – $440** | Faraday-shielded radios, LoRa nodes, 6" e-readers, admin Android, optional GL.iNet router, SSD/HDD, M-DISC Seed Core, `sd32`/`usb128` packs, spares. |
+| **Module A: Comms, Storage & Faraday Vault** | **Fat-50 / 40mm Steel Ammo Can** (foam-lined) or VEVOR `0.565 Cu.ft` (`13.39" × 9.25" × 4.96"`) | **~$260 – $420** | Radios, LoRa nodes, 6" e-readers, admin Android, GL.iNet router, NVMe/USB/MicroSD + OTG adapters, spares. |
 | **Module B: Commodity Solar Power Hub** | **Anker SOLIX C300 DC** (or EcoFlow River 2/3 / Jackery 300 Plus) | **~$150 – $200** (+ $90–$140 panel) | **~288 Wh LiFePO4**, pure-DC (no AC inverter loss on C300 DC), built-in MPPT solar + 140W USB-C PD + 12V socket. *(DIY 2× 10Ah VEVOR option below).* |
 | **Field Compute (Separate / Go-Bag)** | Used **ThinkPad T480 / X280** (USB-C PD) in Faraday sleeve | **$130 – $180** | Primary engineering workstation, Kiwix/web server, local 7B AI (`qwen2.5-coder:7b`), radio/ESP32 programmer. |
 
@@ -25,12 +25,12 @@ A pure-DC, modular, Faraday-protected disaster IT & communications architecture 
 
 ## Module A: Comms, Storage & Faraday Vault (`0.565 Cu.ft`)
 
-**Target Case:** VEVOR `342413` IP67 (`13.39" × 9.25" × 4.96"` int.) — **~$40**.  
-**Faraday Rule:** Store radios, phones, router, and SSDs inside **conductive Faraday bags** (e.g., 2-layer ESD/TitanRF pouches) inside the foam, with **all antennas detached and cables unplugged** (attached wires act as EMP/CME collectors).
+**Target Case:** VEVOR `342413` (`0.565 Cu.ft`, `13.39" × 9.25" × 4.96"` int., ~$40) for daily grab-and-go, **OR** a **Fat-50 / 40mm Steel Ammo Can** (~$20–$35) for EMP-proof Faraday storage.  
+**Faraday Rule:** For true EMP/RF shielding without clunky pouches, line a **steel ammo can** with **1/4"–1/2" closed-cell foam** (prevents shorts), sand/strip paint off the inner lid contact lip (or add conductive EMI gasket tape) for 360° metal-to-metal contact, and store all gear with **antennas detached and cables unplugged**.
 
 | Category | Component | Est. Price | Notes / Repo Integration |
 | :--- | :--- | :--- | :--- |
-| **Case & Shielding** | VEVOR `342413` + 2–3× Faraday bags (or nested steel ammo can for spares) | **$60 – $75** | Waterproof outer shell + RF/EMP inner shield. |
+| **Case & Shielding** | **Fat-50 / 40mm Steel Ammo Can** + closed-cell foam (or VEVOR `342413` grab-box) | **$25 – $45** | Waterproof rubber gasket + welded steel Faraday cage. Toss 2–3× silica gel desiccant packs inside. |
 | **Travel Router (USB-C PD)** | GL.iNet Opal (`$30`) or Beryl AX (`$85`) | **$30 – $85** | ~3W from any USB-C PD bank/port. Serves USB SSD over **HTTP/FTP**, plus Wi-Fi LAN for **LocalSend** & **Briar**. |
 | **Field E-Readers (1–2×)** | Used 6" **Kindle Basic/Paperwhite** or **Kobo Nia/Clara** | **$30 – $50 ea** | `~6.2" × 4.3" × 0.34"`, foam-nested (never in lid). Synced via `04_SCRIPTS/sync-kindle.sh`. |
 | **Admin / Mesh Phone (1×)** | **Spare phone (Pixel on GrapheneOS / Moto on LineageOS)** or cheap rugged Android (see below) | **$0 – $120** | 100% offline, Wi-Fi/BLE/OTG. Runs Kiwix, Organic Maps, PocketPal AI, **Bitchat**, **Briar**, **LocalSend**, **Meshtastic**. |

@@ -7,6 +7,8 @@
 # Big Knowledge Archives
 *.zim
 *.zim.part
+*.mwm
+*.mwm.part
 *.epub
 *.pdf
 
@@ -20,6 +22,7 @@
 *.gguf
 *.bin
 *.raw
+*.uf2
 *.onnx
 03_INTELLIGENCE/ollama_home/
 
@@ -27,6 +30,7 @@
 *.apk
 *.deb
 *.AppImage
+*.flatpak
 *.iso
 *.img.xz
 *.tar.gz

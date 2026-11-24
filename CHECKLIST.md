@@ -17,6 +17,7 @@ Status: **16.1 GB Total Curated Offline Payload**
 - [x] **`meshtastic.apk` (44 MB)**: Off-grid mesh texting & GPS for T1000 & C6L
 - [x] **`organic-maps.apk` (61 MB)**: Offline GPS navigation & terrain topography
 - [x] **`pocketpal-ai.apk` (264 MB)**: Offline GGUF local model runner for Android
+- [x] **`organic-maps-desktop.flatpak`**: Offline Linux Desktop Flatpak bundle for Organic Maps (`app.organicmaps.desktop`)
 - [x] **`arduino-cli` Linux 64-bit binary (17 MB)**: Lightweight compiler & flasher
 
 ---
@@ -26,12 +27,14 @@ Status: **16.1 GB Total Curated Offline Payload**
 - [x] **Cached Arduino ESP32 Core**: Fully installed in `arduino/data/` (for Cardputer & M5Stack S3)
 - [x] **Cached Arduino AVR Core**: Fully installed in `arduino/data/` (for Uno, Nano, Mega)
 - [x] **Arduino Libraries**: `M5Unified`, `M5GFX`, `M5Cardputer`, `IRremote`, `LibSSH-ESP32`
-- [x] **Radio Emergency Frequency Matrix**: `standard_emergency_frequencies.csv` (NOAA 1-7, MURS 1-5, FRS/GMRS 1-22, 2m/70cm calling)
+- [x] **Radio Emergency Frequency Matrix**: `standard_emergency_frequencies.csv` (NOAA 1-7, MURS 1-5, FRS/GMRS 1-22, 2m/70cm calling, plus Chatham-Kent Top 10 Shortlist & `CHATHAM_KENT_UVK5_GUIDE.md`)
+- [x] **MeshCore & Meshtastic Offline Firmware + Flasher**: `02_ENGINEERING/lora_mesh/` (Heltec V4/V3, T1000-E, RAK4631 Room Server/Repeater/Companion binaries, `flash-mesh-node.sh`, & serial CLI cheat sheet)
 
 ---
 
 ## 4. Knowledge & Field Manuals (`01_KNOWLEDGE/` - 191 MB)
 - [x] **Survival Manual ePub (4.9 MB)**: `LigiSurvivalManual.epub` formatted for Kindle, iPad, and mobile
+- [x] **Organic Maps Offline Packs (673 MB)**: `01_KNOWLEDGE/maps_mwm/260928/` (`World`, `WorldCoasts`, Ontario London/Chatham-Kent, Toronto, Barrie, Kingston, Metro Detroit)
 - [ ] **WikiMed Maxi ZIM (1.86 GB)**: Resumable archive queued (`04_SCRIPTS/download-core.sh`)
 - [ ] **WikiHow Maxi ZIM (~8 GB)**: Queued for large storage profile (`usb128` / `sata`)
 

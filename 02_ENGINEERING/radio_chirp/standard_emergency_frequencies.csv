@@ -28,3 +28,12 @@ Location,Name,Frequency,Duplex,Offset,Tone,rToneFreq,cToneFreq,DtcsCode,DtcsPola
 27,GMRS-20,462.675000,,0.000000,,88.5,88.5,023,NN,FM,5.00,,GMRS High Power 20
 28,GMRS-21,462.700000,,0.000000,,88.5,88.5,023,NN,FM,5.00,,GMRS High Power 21
 29,GMRS-22,462.725000,,0.000000,,88.5,88.5,023,NN,FM,5.00,,GMRS High Power 22
+30,WX-CCG-LSC,161.650000,,0.000000,,88.5,88.5,023,NN,FM,5.00,,24/7 Coast Guard Marine Weather (Grande Pointe / Lake St. Clair)
+31,WX-CCG-ERI,161.775000,,0.000000,,88.5,88.5,023,NN,FM,5.00,,24/7 Coast Guard Marine Weather (Lake Erie)
+32,CK-FIRE-U,414.137500,,0.000000,,88.5,88.5,023,NN,NFM,6.25,,Chatham-Kent Fire Dispatch (Main UHF Water Tower Repeater)
+33,CK-FIRE-V,154.680000,,0.000000,,88.5,88.5,023,NN,NFM,5.00,,Chatham-Kent Fire Dispatch (VHF Paging)
+34,VE3KCR-RPT,147.120000,+,0.600000,Tone,100.0,100.0,023,NN,FM,5.00,,Chatham Main Ham Repeater (VE3KCR) - Local chatter & storm nets
+35,RAIL-CNVIA,161.415000,,0.000000,,88.5,88.5,023,NN,NFM,5.00,,CN & VIA Rail Trains (Main road channel through Chatham + track detectors)
+36,RAIL-CPKC,161.475000,,0.000000,,88.5,88.5,023,NN,NFM,5.00,,CPKC Freight Trains (Main road channel through Chatham)
+37,CYCK-AWOS,122.975000,,0.000000,,88.5,88.5,023,NN,AM,25.00,,Chatham-Kent Airport (CYCK) Automated Weather
+38,AIR-GUARD,121.500000,,0.000000,,88.5,88.5,023,NN,AM,25.00,,International Aviation Emergency (Guard)

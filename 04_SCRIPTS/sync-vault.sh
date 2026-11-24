@@ -82,6 +82,7 @@ case "$PROFILE" in
             --include='01_KNOWLEDGE/' \
             --include='01_KNOWLEDGE/manuals_pdf/***' \
             --include='01_KNOWLEDGE/kindle_books/***' \
+            --include='01_KNOWLEDGE/maps_mwm/***' \
             --include='01_KNOWLEDGE/zim/' \
             --include='01_KNOWLEDGE/zim/*medicine*.zim' \
             --include='01_KNOWLEDGE/zim/*wikihow*.zim' \
@@ -110,6 +111,8 @@ case "$PROFILE" in
             --include='00_CIVILIAN_SEED_PACK/***' \
             --include='00_BOOTSTRAP/***' \
             --include='01_KNOWLEDGE/kindle_books/***' \
+            --include='01_KNOWLEDGE/maps_mwm/***' \
+            --include='02_ENGINEERING/lora_mesh/***' \
             --include='02_ENGINEERING/radio_chirp/***' \
             --include='04_SCRIPTS/flash-image.sh' \
             --include='README.md' \

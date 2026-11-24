@@ -28,7 +28,7 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 
 ## Hardware & Shopping Guide
 
-See **[HARDWARE_BOX_BOM.md](HARDWARE_BOX_BOM.md)** for the full itemized BOM, pricing, power math, Faraday rules, and recommended ThinkPad / rugged phone / VEVOR IP67 case picks.
+See **[HARDWARE_BOX_BOM.md](HARDWARE_BOX_BOM.md)** for the full itemized BOM, pricing, solar wiring, and recommended ThinkPad / rugged phone / Mission Darkness 15L Faraday dry bag picks.
 
 ---
 

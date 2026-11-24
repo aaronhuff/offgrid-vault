@@ -4,20 +4,18 @@ Status: **16.1 GB Total Curated Offline Payload**
 
 ---
 
-## 1. Laptop & Mobile Intelligence (`03_INTELLIGENCE/` - 7.0 GB)
+## 1. Laptop & Mobile Intelligence (`03_INTELLIGENCE/` - ~7.1 GB)
 - [x] **Laptop Rootless Podman Ollama**: Operational and tested (`offgrid-ollama` on port 11434)
-- [x] **`llama3.2:3b` (2.0 GB)**: Verified offline on laptop (~15 tokens/sec)
-- [x] **`qwen2.5-coder:7b` (4.7 GB)**: Verified offline on laptop (C++/Arduino coding ready)
-- [x] **`Llama-3.2-1B-Instruct-Q4_K_M.gguf` (771 MB)**: Downloaded and ready to drop onto Android/SD card
+- [x] **`Llama-3.2-1B-Instruct-Q4_K_M.gguf` (771 MB)**: Ready for Android/PocketPal AI
+- [x] **`Llama-3.2-3B-Instruct-Q4_K_M.gguf` (1.9 GB)**: Ready for ThinkPad / fast CPU inference
+- [x] **`Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf` (4.4 GB)**: Ready for ThinkPad coding/engineering
 
 ---
 
-## 2. Tactical & Mobile Software (`00_BOOTSTRAP/` - 610 MB)
-- [x] **`kiwix-android.apk` (226 MB)**: Offline Wikipedia / WikiMed reader for Android
-- [x] **`meshtastic.apk` (44 MB)**: Off-grid mesh texting & GPS for T1000 & C6L
-- [x] **`organic-maps.apk` (61 MB)**: Offline GPS navigation & terrain topography
-- [x] **`pocketpal-ai.apk` (264 MB)**: Offline GGUF local model runner for Android
-- [x] **`organic-maps-desktop.flatpak`**: Offline Linux Desktop Flatpak bundle for Organic Maps (`app.organicmaps.desktop`)
+## 2. Tactical & Mobile Software (`00_BOOTSTRAP/` - ~1.5 GB)
+- [x] **Core Android APKs (932 MB)**: `kiwix-android.apk`, `meshtastic.apk`, `organic-maps.apk`, `pocketpal-ai.apk`, `localsend.apk`, `briar.apk`, `bitchat.apk`, `librera.apk`, `trail-sense.apk`, `termux.apk`, `keepassdx.apk`, `vlc.apk`, `lemuroid.apk`
+- [x] **Universal Linux AppImages (432 MB)**: `kiwix-desktop.AppImage`, `LocalSend-x86_64.AppImage`, `KeePassXC-x86_64.AppImage`, `organic-maps-desktop.flatpak`, `rpi-imager.AppImage`
+- [x] **Windows Portable Tools (175 MB)**: `kiwix-desktop_windows_x64.zip`, `LocalSend-windows-portable.zip`
 - [x] **`arduino-cli` Linux 64-bit binary (17 MB)**: Lightweight compiler & flasher
 
 ---

@@ -19,14 +19,14 @@ A pure-DC, zero-wiring, grab-and-go disaster IT & communications bunker packed i
 | **Waterproof Faraday Bag** | **Mission Darkness Dry Shield Faraday Tote 15L** + neoprene laptop sleeve + silica gel packs | **~$140** | ~10–11L of gear leaves plenty of room for the required **3× roll-top folds**. Clear front pocket holds laminated Quick-Start card. |
 | **Pure-DC Power Station** | **Anker SOLIX C300 DC** (`4.9" × 4.7" × 7.9"`, ~6.2 lbs) | **~$160 – $210** | **288 Wh LiFePO4**, **zero AC inverter**, built-in **100W MPPT solar (XT60)**, 140W USB-C PD (runs any USB-C PD laptop), and built-in camp light. |
 | **Compact Solar Panel** | **40W–60W Multi-Fold Panel (XT60/MC4)** *(fits in bag)* <br>*(Or **Renogy 100W Folding Panel** carried externally)* | **~$75 – $115** | Compact 40W–60W panel (~11"×8" folded) fits inside the 15L bag (~160–260 Wh/sun-day). Plug in a 100W panel at base camp via XT60. |
-| **Comms (USB-C Direct)** | **2× Quansheng UV-K5(8) / UV-K6** *(or Tidradio TD-H3 GMRS)* + **2× Foldable Whip Antennas** | **~$75 – $95** | **Direct USB-C charging** on battery (no cradle), built-in LED flashlight, NOAA weather, FM radio. Antennas detached in storage. |
+| **Comms (Voice + Quiet Mesh)** | **2× Quansheng UV-K5(8) / UV-K6** *(or Tidradio TD-H3 GMRS)* + **2× Foldable Whips** + **2–4× Meshtastic LoRa Nodes** *(Seeed T1000-E card / Heltec V3)* | **~$155 – $250** | UV-K5(8) = USB-C voice + NOAA + FM + LED; T1000-E = credit-card-sized, encrypted multi-mile quiet text & GPS (`02_ENGINEERING/lora_mesh/`). Antennas detached in storage. |
 | **Rugged Storage** | **1× 500GB–1TB NVMe in IP67 Rugged Aluminum USB-C Enclosure** (ORICO/Sabrent) + **2× 32GB/64GB MicroSDs** + **3× $3 USB-C/A OTG MicroSD Readers** | **~$95 – $120** | Shock/splash-proof master NVMe + universal MicroSDs readable on any phone/laptop. Refresh yearly via `04_SCRIPTS/sync-vault.sh`. |
 | **Cables, Light & Audio** | **2× 100W USB-C PD cables** + **1× USB-C headlamp** (Sofirn/Wurkkos, optional) + **3.5mm wired earbuds** + **laminated Quick-Start** | **~$25 – $55** | Quick-Start lists GMRS/NOAA frequencies & Android APK sideloading steps. |
 | **Field Compute** | **Any USB-C PD Laptop** *(e.g., used ThinkPad T480/X280, Dell Latitude, HP EliteBook)* | **~$180 – $240** | Runs `kiwix-serve`, Wi-Fi Hotspot, `LocalSend`, `llama.cpp`/Ollama, CHIRP. *($0 if reusing an existing USB-C PD laptop).* |
 | **Pocket Node** | **Spare/Rugged Android** (3.5mm jack + MicroSD + OTG, GrapheneOS/LineageOS or debloated) | **$0 – $130** | Moto G Power (`$0–$50`), Samsung XCover Pro (`$80–$120`), or Ulefone Armor X13 (`$90–$130`). Runs Kiwix, Organic Maps, PocketPal AI, Bitchat, Briar, LocalSend, Librera, Trail Sense, VLC. |
 
-* **Total (reusing an existing USB-C PD laptop, phone, & solar panel):** **~$495 – $590 CAD**
-* **Total all-in from scratch:** **~$750 – $1,105 CAD**
+* **Total (reusing an existing USB-C PD laptop, phone, & solar panel):** **~$575 – $745 CAD**
+* **Total all-in from scratch:** **~$830 – $1,260 CAD**
 
 *(Note: Sealed power stations trade off component-level repairability for zero-wiring compactness; for a field-serviceable 12V build, pair a Victron SmartSolar MPPT 75/10 + 12V 10Ah LiFePO4 + 12V socket + 130W PD car charger instead.)*
 
@@ -37,6 +37,7 @@ A pure-DC, zero-wiring, grab-and-go disaster IT & communications bunker packed i
 | Layer | Tool | Purpose |
 | :--- | :--- | :--- |
 | **Pod-to-Pod Voice** | **UV-K5(8) / GMRS + Foldable Whip** | Primary voice bridge (miles of range) + NOAA weather |
+| **Quiet Multi-Mile Text** | **Meshtastic / MeshCore** (T1000-E / Heltec V3) | Encrypted, low-power LoRa text & GPS pins across miles |
 | **Pod Text** | **Bitchat** (BLE) & **Briar** (BLE + Wi-Fi) | Zero-infrastructure phone-to-phone chat & offline forums |
 | **Organic File Seeding** | **LocalSend** + **Laptop Hotspot** + **MicroSD OTG** | Cross-platform AirDrop for APKs, maps, and books; zero router needed |
 | **Knowledge & Maps** | **Kiwix**, **Organic Maps**, **Librera**, **Trail Sense** | Wikipedia/WikiMed/iFixit, topo maps, EPUB/PDF manuals, compass/barometer |

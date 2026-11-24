@@ -18,7 +18,7 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 | Layer | Software & Content | Hardware / Delivery |
 | :--- | :--- | :--- |
 | **1. Knowledge & Navigation** | Kiwix (WikiMed, WikiHow, iFixit `.zim`), Organic Maps (`.mwm`), Librera (EPUB/PDF), Trail Sense | Salvaged phones/tablets, any USB-C PD laptop, rugged NVMe + MicroSDs |
-| **2. Comms & Seeding** | **GMRS / UV-K5(8)** (pod-to-pod voice + USB-C), **Bitchat** & **Briar** (pod text), **LocalSend** | USB-C rechargeable UV-K5(8)/TD-H3 + foldable whips, Laptop Hotspot |
+| **2. Comms & Seeding** | **GMRS / UV-K5(8)** (voice + USB-C), **Meshtastic** (quiet LoRa text/GPS), **Bitchat** & **Briar** (pod text), **LocalSend** | USB-C UV-K5(8)/TD-H3 + foldable whips, Seeed T1000-E LoRa cards, Laptop Hotspot |
 | **3. Local AI (Client-Side)** | **PocketPal AI** + `Llama-3.2-1B/3B` (phones), `llama.cpp` / Ollama + `qwen2.5-coder:7b` (laptops) | Offloaded to client phones & laptops instead of burning central server watts |
 | **4. Media & Morale** | **VLC**, `04_MORALE/` (music, radio dramas, cartoons), USB-C magnetic flashlight | Spare/rugged Androids (3.5mm jack + FM tuner + MicroSD) |
 

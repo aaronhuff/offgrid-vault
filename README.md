@@ -1,43 +1,56 @@
 # Off-Grid Vault (`offgrid-vault`)
 
-A NASA-redundancy inspired, multi-tiered digital disaster preparedness vault designed for off-grid resilience, minimal power consumption, and air-gapped operation.
+A pragmatic, pure-DC disaster IT and communications kit built on one core principle: **capture everything useful offline—knowledge, maps, comms, media, and local AI—so it can run on whatever salvaged hardware still works**, backed by a compact, Faraday-protected set of prepped hardware to bootstrap a community.
 
-## Architecture & Fleet Roles
+---
 
-| Tier | Hardware | Power | Role |
-| :--- | :--- | :--- | :--- |
-| **Tier 0 (Micro-Power)** | Kindle, Cardputer, M5Stack S3 | 0.1W – 1W | E-ink reading (survival guides, field medicine), hardware bus diagnostics, radio sniffing. |
-| **Tier 1 (Tactical Mobile)** | Smartphones, iPad, Meshtastic T1000/C6L, Quansheng UV-K5 | 1W – 5W | Offline GPS mapping (Organic Maps), Kiwix Wikipedia/WikiMed, encrypted mesh texting, analog RF comms. |
-| **Tier 2 (Workstation Core)** | Laptop, Raspberry Pi 500 / 4B | 15W – 45W | Local LLMs (Ollama / llama.cpp), self-contained Arduino IDE & ESP32 compiler, radio programming (CHIRP). |
-| **Tier 3 (Cold Archive)** | 2.5" External SATA, 32GB MicroSDs, 128GB USBs, Synology NAS | 1.5W – 25W | Air-gapped, bus-powered physical backups and cold mirrors. |
+## Core Philosophy
+
+1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on commodity ~300Wh LiFePO4 USB-C PD power + folding solar.
+2. **Salvage-Friendly & Gracefully Degradable:** No single server is a fatal point of failure. Phones, tablets, e-readers, and ThinkPads all work independently—and any salvaged Android, iPhone, Linux, or Windows machine can join and replicate the stack.
+3. **Organic Propagation:** No complex sync daemons. Spread files over **USB-C PD Travel Router (HTTP/FTP)**, **LocalSend** (cross-platform Wi-Fi AirDrop), **Bitchat/Briar** (BLE/Wi-Fi pod chat), and **MicroSD/USB + OTG adapters**.
+4. **Faraday-First Storage:** Store radios, laptops, phones, routers, and SSD/MicroSDs inside conductive Faraday pouches (antennas detached, cables unplugged) inside IP67 cases.
+
+---
+
+## The 4-Layer Survival Stack
+
+| Layer | Software & Content | Hardware / Delivery |
+| :--- | :--- | :--- |
+| **1. Knowledge & Navigation** | Kiwix (WikiMed, WikiHow, iFixit `.zim`), Organic Maps (`.mwm`), Survival ePubs/PDFs | 6" E-readers, salvaged phones/tablets, ThinkPad, `sd32` MicroSDs |
+| **2. Comms & Seeding** | **GMRS / UV-K5** (pod-to-pod voice), **Bitchat** & **Briar** (pod text), **LocalSend** + **Meshtastic** | Quansheng UV-K5 + foldable whips, GL.iNet USB-C PD Travel Router, LoRa nodes |
+| **3. Local AI (Client-Side)** | **PocketPal AI** + `Llama-3.2-1B/3B` (phones), `llama.cpp` / Ollama + `qwen2.5-coder:7b` (laptops) | Offloaded to client phones & ThinkPads instead of burning central server watts |
+| **4. Media & Morale** | **VLC**, **Librera** (EPUB/PDF), **Trail Sense**, `04_MORALE/` (music, radio dramas, cartoons) | Spare/rugged Androids (3.5mm jack + FM tuner + MicroSD) |
+
+*(Optional Engineering / Home-Base Tier: `02_ENGINEERING/` Arduino/ESP32/CHIRP toolchains, `00_BOOTSTRAP/container_images/`, and `05_NAS_HORDE/`.)*
+
+---
+
+## Hardware & Shopping Guide
+
+See **[HARDWARE_BOX_BOM.md](HARDWARE_BOX_BOM.md)** for the full itemized BOM, pricing, power math, Faraday rules, and recommended ThinkPad / rugged phone / VEVOR IP67 case picks.
+
+---
 
 ## Quickstart
 
-### 1. Curate Local Cache
-Run the curation script to download standalone APKs, Kiwix ZIMs, and quantized GGUF models:
+### 1. Curate Offline Assets (APKs, AppImages, ZIMs, Models)
+Downloads Android APKs, universal Linux AppImages, Windows portable tools, Kiwix ZIMs, and quantized GGUF models:
 ```bash
 ./04_SCRIPTS/download-core.sh
 ```
 
-### 2. Set Up Local LLM on Laptop
-Starts a rootless Podman Ollama container bound to the local vault:
-```bash
-./03_INTELLIGENCE/setup-local-llm.sh
-podman exec -it offgrid-ollama ollama run llama3.2:3b
-podman exec -it offgrid-ollama ollama run qwen2.5-coder:7b
-```
-
-### 3. Pre-Cache Arduino & ESP32 Toolchains
-Caches offline toolchains for Arduino AVR and ESP32 (Cardputer & M5Stack):
-```bash
-./02_ENGINEERING/arduino/setup-offline-cores.sh
-```
-
-### 4. Stamp Out Media to MicroSD or USB
+### 2. Stamp Portable Media (MicroSD / USB / SSD)
 ```bash
 # Pocket Survival (Fits on 32GB MicroSD < 29GB)
 ./04_SCRIPTS/sync-vault.sh --profile sd32 --target /run/media/USER/CARD
 
-# Engineering & AI (Fits on 128GB Flash Drive < 118GB)
+# Full Kit & AI (Fits on 128GB Flash Drive / NVMe < 118GB)
 ./04_SCRIPTS/sync-vault.sh --profile usb128 --target /run/media/USER/USB
+```
+
+### 3. Optional: Local LLM & Arduino/ESP32 Setup (ThinkPad)
+```bash
+./03_INTELLIGENCE/setup-local-llm.sh
+./02_ENGINEERING/arduino/setup-offline-cores.sh
 ```

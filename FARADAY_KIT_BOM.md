@@ -12,15 +12,14 @@ A pure-DC, zero-wiring, grab-and-go disaster IT & communications bunker packed i
 
 ---
 
-## Tier 0: Pocket Comms & Knowledge Pouch (~$150 – $250 CAD, <1L)
+## Tier 0: Pocket / Get-Home Comms & Knowledge Pack (~$180 – $290 CAD)
 
-Drop a single **waterproof Faraday tablet pouch (~$20–$25 CAD)** into *any* existing bug-out bag—holds **90% of the survival capability** in the size of a paperback book:
+Drop a **waterproof Faraday tablet pouch (~$20–$25 CAD)** + compact folding panel into *any* existing bug-out / get-home backpack:
 
 * **1× Dedicated Offline Android Phone** *(Moto G Power / XCover Pro / Oukitel WP23 — ~$80–$150, or $0 spare)* with a **128GB–512GB MicroSD (TF) card** holding the entire vault horde (Kiwix ZIMs, Organic Maps, PocketPal AI `1B`, ePubs/PDFs, `04_MORALE/`, and `00_BOOTSTRAP/` APKs/tools).
 * **1–2× Quansheng UV-K5(8)** *(~$35 ea)* + **foldable whip(s)** *(antennas detached)* — USB-C rechargeable voice comms, NOAA weather, FM radio, LED flashlight.
-* **1× Spare MicroSD + 2× $3 OTG Readers + short USB-C cable + 3.5mm wired earbuds** *(~$20)*.
-
-Recharges from whatever power bank or folding solar panel is already in your bug-out bag.
+* **1× Generic 20,000mAh USB-C PD Power Bank** *(~$35 CAD)* + **FlexSolar 60W Folding Panel** *(~$90–$110 CAD, IP65, USB-C PD + DC out)* — refills the 20,000mAh bank in ~2–3 hrs of sun (keep bank in shade) and scales straight up to Tier 1's C300 DC.
+* **Essentials:** **1× USB-C rechargeable flashlight** (`~$25`, e.g., Sofirn SC18), **1× real baseplate/button compass** (`~$8`), **1× spare MicroSD + 2× $3 OTG Readers + USB-C cables + 3.5mm wired earbuds**.
 
 ---
 

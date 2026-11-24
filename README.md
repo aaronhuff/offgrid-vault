@@ -6,10 +6,10 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 
 ## Core Philosophy
 
-1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on commodity ~300Wh LiFePO4 USB-C PD power + folding solar.
-2. **Salvage-Friendly & Gracefully Degradable:** No single server is a fatal point of failure. Phones, tablets, e-readers, and ThinkPads all work independently—and any salvaged Android, iPhone, Linux, or Windows machine can join and replicate the stack.
-3. **Organic Propagation:** No complex sync daemons. Spread files over **USB-C PD Travel Router (HTTP/FTP)**, **LocalSend** (cross-platform Wi-Fi AirDrop), **Bitchat/Briar** (BLE/Wi-Fi pod chat), and **MicroSD/USB + OTG adapters**.
-4. **Faraday-First Storage:** Store cold spares, radios, phones, routers, and SSD/MicroSDs inside a **foam-lined steel ammo can (Fat-50 / 40mm)** (antennas detached, cables unplugged) for cheap, waterproof EMP protection.
+1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on a **100W folding solar panel $\rightarrow$ Victron MPPT $\rightarrow$ 12V 10Ah LiFePO4 $\rightarrow$ 130W USB-C PD car charger** (everything except the panel shielded inside steel).
+2. **Salvage-Friendly & Gracefully Degradable:** No single server is a fatal point of failure. Phones and ThinkPads work independently—and any salvaged Android, iPhone, Linux, or Windows machine can join and replicate the stack.
+3. **Organic Propagation:** No travel router or complex sync daemons required. Spread files over **ThinkPad Wi-Fi Hotspot + LocalSend** (cross-platform AirDrop), **Bitchat/Briar** (BLE/Wi-Fi pod chat), and **MicroSD + $3 OTG adapters**.
+4. **Faraday-First Storage:** Store the MPPT, 12V battery, USB-C PD chargers, radios, phone, rugged NVMe, and MicroSDs inside a **foam-lined Fat-50 steel ammo can** (antennas detached, cables unplugged), with the ThinkPad in a **Faraday sleeve**.
 
 ---
 
@@ -17,10 +17,10 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 
 | Layer | Software & Content | Hardware / Delivery |
 | :--- | :--- | :--- |
-| **1. Knowledge & Navigation** | Kiwix (WikiMed, WikiHow, iFixit `.zim`), Organic Maps (`.mwm`), Survival ePubs/PDFs | 6" E-readers, salvaged phones/tablets, ThinkPad, `sd32` MicroSDs |
-| **2. Comms & Seeding** | **GMRS / UV-K5** (pod-to-pod voice), **Bitchat** & **Briar** (pod text), **LocalSend** + **Meshtastic** | Quansheng UV-K5 + foldable whips, GL.iNet USB-C PD Travel Router, LoRa nodes |
+| **1. Knowledge & Navigation** | Kiwix (WikiMed, WikiHow, iFixit `.zim`), Organic Maps (`.mwm`), Librera (EPUB/PDF), Trail Sense | Salvaged phones/tablets, ThinkPad, rugged NVMe + MicroSDs |
+| **2. Comms & Seeding** | **GMRS / UV-K5(8)** (pod-to-pod voice + USB-C), **Bitchat** & **Briar** (pod text), **LocalSend** | USB-C rechargeable UV-K5(8)/TD-H3 + foldable whips, ThinkPad Hotspot |
 | **3. Local AI (Client-Side)** | **PocketPal AI** + `Llama-3.2-1B/3B` (phones), `llama.cpp` / Ollama + `qwen2.5-coder:7b` (laptops) | Offloaded to client phones & ThinkPads instead of burning central server watts |
-| **4. Media & Morale** | **VLC**, **Librera** (EPUB/PDF), **Trail Sense**, `04_MORALE/` (music, radio dramas, cartoons) | Spare/rugged Androids (3.5mm jack + FM tuner + MicroSD) |
+| **4. Media & Morale** | **VLC**, `04_MORALE/` (music, radio dramas, cartoons), USB-C magnetic flashlight | Spare/rugged Androids (3.5mm jack + FM tuner + MicroSD) |
 
 *(Optional Engineering / Home-Base Tier: `02_ENGINEERING/` Arduino/ESP32/CHIRP toolchains, `00_BOOTSTRAP/container_images/`, and `05_NAS_HORDE/`.)*
 

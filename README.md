@@ -6,10 +6,10 @@ A pragmatic, pure-DC disaster IT and communications kit built on one core princi
 
 ## Core Philosophy
 
-1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on a **100W folding solar panel $\rightarrow$ Victron MPPT $\rightarrow$ 12V 10Ah LiFePO4 $\rightarrow$ 130W USB-C PD car charger** (everything except the panel shielded inside steel).
+1. **Zero-Inverter, Pure-DC Power:** Skip power-hungry x86 mini-PCs and AC inverters. Run on a **100W folding solar panel $\rightarrow$ Victron MPPT $\rightarrow$ 12V 10Ah LiFePO4 $\rightarrow$ 130W USB-C PD car charger** (everything except the panel shielded inside the Faraday bag).
 2. **Salvage-Friendly & Gracefully Degradable:** No single server is a fatal point of failure. Phones and ThinkPads work independently—and any salvaged Android, iPhone, Linux, or Windows machine can join and replicate the stack.
 3. **Organic Propagation:** No travel router or complex sync daemons required. Spread files over **ThinkPad Wi-Fi Hotspot + LocalSend** (cross-platform AirDrop), **Bitchat/Briar** (BLE/Wi-Fi pod chat), and **MicroSD + $3 OTG adapters**.
-4. **Faraday-First Storage:** Store the MPPT, 12V battery, USB-C PD chargers, radios, phone, rugged NVMe, and MicroSDs inside a **foam-lined Fat-50 steel ammo can** (antennas detached, cables unplugged), with the ThinkPad in a **Faraday sleeve**.
+4. **Faraday-First Storage:** Store the ThinkPad, MPPT, 12V battery, USB-C PD chargers, radios, phone, rugged NVMe, and MicroSDs inside a **15L Waterproof Faraday Dry Bag** (antennas detached, cables unplugged, padded inner pouches) for grab-and-go EMP + weather protection.
 
 ---
 

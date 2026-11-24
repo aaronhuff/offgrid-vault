@@ -4,14 +4,13 @@ A pure-DC, dual-purpose, Faraday-protected disaster IT & communications kit desi
 
 **Physical Split:**
 * **External:** Renogy 100W Folding Solar Panel (MC4/XT60).
-* **Faraday Laptop Sleeve:** Used USB-C PD ThinkPad (T480 / X280).
-* **Foam-Lined Fat-50 Steel Ammo Can (`12" × 7" × 8.5"`):** Everything else—power silicon, 12V LiFePO4, radios, phone, rugged NVMe + MicroSDs, lighting, and spares.
+* **Mission Darkness Dry Shield Faraday Tote 15L (`~$126 CAD`):** Waterproof + EMP-shielded roll-top bag holding **everything else**—ThinkPad (in neoprene sleeve), Victron MPPT, 12V 10Ah LiFePO4, USB-C PD chargers, radios, phone, rugged NVMe + MicroSDs, flashlight, and spares. *(Clear front pocket holds the laminated Quick-Start card).*
 
 ---
 
 ## Core Philosophy (Zero-Fluff, Dual-Purpose)
-1. **Everything Dual-Purpose:** The ThinkPad is both your workstation and Wi-Fi hotspot (`LocalSend` / `kiwix-serve`); the phone is your GPS/EPUB/AI/BLE-mesh node + FM/MP3 player; the radios have built-in flashlights + NOAA; the USB-C flashlight sticks magnetically to the steel ammo can as a work light.
-2. **Shield the Silicon, Not the Panel:** Keep the Victron MPPT, 12V LiFePO4 (which has an internal BMS), USB-C PD car chargers, laptop, phone, radios, and NVMe inside Faraday shielding. Leave only the raw 100W solar panel outside.
+1. **Everything Dual-Purpose:** The ThinkPad is both your workstation and Wi-Fi hotspot (`LocalSend` / `kiwix-serve`); the phone is your GPS/EPUB/AI/BLE-mesh node + FM/MP3 player; the radios have built-in flashlights + NOAA; the USB-C flashlight works as a camp/repair light.
+2. **Shield the Silicon, Not the Panel:** Keep the ThinkPad, Victron MPPT, 12V LiFePO4 (which has an internal BMS), USB-C PD car chargers, phone, radios, and NVMe inside the **15L Faraday Dry Bag** (with padded pouches/sleeves so sharp edges never pinhole the liner, and roll the top **3 full folds** to seal). Leave only the raw 100W solar panel outside.
 3. **Organic Propagation:** ThinkPad Wi-Fi Hotspot + **LocalSend** (phone-to-phone AirDrop) + **Bitchat / Briar** (BLE/Wi-Fi pod chat) + **MicroSDs & $3 OTG readers**—no dedicated travel router or sync daemons required.
 
 ---
@@ -20,8 +19,7 @@ A pure-DC, dual-purpose, Faraday-protected disaster IT & communications kit desi
 
 | Subsystem | Exact Item | Est. Price (CAD) | Notes / Repo Integration |
 | :--- | :--- | :--- | :--- |
-| **Enclosure & Shielding** | **Fat-50 Steel Ammo Can** (`12" × 7" × 8.5"`) + 1/4"–1/2" closed-cell foam + silica gel packs | **~$42** | Sand paint off inner lid lip for 360° metal-to-metal Faraday seal; line walls with foam so nothing shorts. |
-| **Laptop Faraday** | **Faraday Laptop Sleeve** (TitanRF / Mission Darkness) | **~$25** | Protects ThinkPad alongside the ammo can. |
+| **Waterproof Faraday Bag** | **Mission Darkness Dry Shield Faraday Tote 15L** + padded neoprene laptop/tech pouches + silica gel packs | **~$145** | Waterproof + EMP-shielded in one wearable bag (~6–7L gear leaves plenty of room for 3× roll-top folds). Use padded inner sleeves to protect the liner. |
 | **Solar Panel** *(External)* | **Renogy 100W Folding Solar Panel** (MC4 / XT60) | **~$130 – $150** | ~350–450 Wh/sun-day. Use raw MC4/XT60 output only. |
 | **MPPT Controller** *(In Can)* | **Victron SmartSolar MPPT 75/10** *(or **75/15**)* | **~$95 – $115** | Tiny (`3.9"×4.4"`), ~98% efficiency, native LiFePO4, fanless. *(Budget alt: Renogy Wanderer 10A PWM ~$28).* |
 | **12V Buffer Battery** *(In Can)* | **1× 12V 10Ah LiFePO4** *(LiTime / Eco-Worthy)* + **15A inline fuse** | **~$50** | 128 Wh; stabilizes solar voltage for night/clouds. *(Also works with any scavenged 12V car/marine battery).* |
@@ -33,8 +31,8 @@ A pure-DC, dual-purpose, Faraday-protected disaster IT & communications kit desi
 | **Field Compute** | **Used ThinkPad T480 / X280** (USB-C PD) | **~$180 – $240** | Runs `kiwix-serve`, ThinkPad Wi-Fi Hotspot, `LocalSend`, `llama.cpp`/Ollama, CHIRP. *($0 if reusing existing laptop).* |
 | **Pocket Node** *(In Can)* | **Spare/Rugged Android** (3.5mm jack + MicroSD + OTG, GrapheneOS/LineageOS or debloated) | **$0 – $130** | Moto G Power (`$0–$50`), Samsung XCover Pro (`$80–$120`), or Ulefone Armor X13 (`$90–$130`). Runs Kiwix, Organic Maps, PocketPal AI, Bitchat, Briar, LocalSend, Librera, Trail Sense, VLC. |
 
-* **Total (reusing an existing ThinkPad, phone, & Renogy 100W panel):** **~$490 – $565 CAD**
-* **Total all-in from scratch (excl. panel):** **~$670 – $935 CAD** *(+$130–$150 if buying the 100W panel).*
+* **Total (reusing an existing ThinkPad, phone, & Renogy 100W panel):** **~$565 – $640 CAD**
+* **Total all-in from scratch (excl. panel):** **~$745 – $1,010 CAD** *(+$130–$150 if buying the 100W panel).*
 
 ---
 

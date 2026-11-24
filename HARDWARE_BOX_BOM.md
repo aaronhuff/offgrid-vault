@@ -41,24 +41,20 @@ A pure-DC, modular, Faraday-protected disaster IT & communications architecture 
 
 ---
 
-## Module B: Solar Power & Charging Hub (Commodity First)
+## Module B: Shielded Modular Power & Pass-Around Banks
 
-### Primary Pick: Off-the-Shelf Pure-DC LiFePO4 Station (~$150 – $200)
-Building a custom MPPT + fuse + shunt box is clunky when commodity LiFePO4 stations are cheaper, lighter (~6 lbs), and include built-in BMS, MPPT, and USB-C PD:
-* **Top Pick — Anker SOLIX C300 DC (~$150–$200):** **288 Wh LiFePO4**, **zero AC inverter** (pure DC efficiency), built-in **100W MPPT solar input (XT60)**, multiple **140W/100W USB-C PD** ports (charges ThinkPad + phones + GL.iNet router simultaneously), and a 12V car socket.
-* **Alternatives (~$180–$230):** **EcoFlow River 2/3** or **Jackery Explorer 300 Plus** (LiFePO4, built-in MPPT + USB-C PD; keep AC inverter switched **OFF** to avoid idle drain).
-* **Solar Pairing:** **60W–100W folding solar panel** (**$90–$140**) with MC4$\rightarrow$XT60 lead (**~250–450 Wh/sun-day**).
-* **What 288 Wh + 60–100W Solar Delivers (Real-World Budget):**
-  * *Per full 288 Wh tank (~255 Wh usable DC):* **~16–18 smartphones** (14 Wh ea), **~25+ UV-K5/GMRS radios** (9 Wh ea), **~40+ 6" e-readers** (6 Wh ea), **~80+ hrs of GL.iNet router** (3W), or **~3–5 ThinkPad T480 charges** (55 Wh ea).
-  * *Daily steady-state with solar:* Easily sustains a **family/pod of 4–6 phones + 2–4 radios + 2 e-readers + 8–12 hrs of travel router Wi-Fi every day**, plus **1–2 ThinkPad recharges/week**—and scales horizontally (add a second C300 DC) or vertically (bigger panel/station).
-* **Downside & Trade-Off:** Sealed all-in-one stations are **not field-repairable** if the internal BMS or MPPT board fails. We accept that trade-off for weight, price, and zero-wiring simplicity—or choose the DIY Module B below if repairability is your top priority.
-* **EMP/Faraday Note:** Store the power station in a Faraday bag/lined metal bin when not in use, with solar/USB cables unplugged.
+### Primary Pick: Shielded Silicon + Modular 12V + XTAR Pass-Around Banks
+Instead of trapping vulnerable controller boards inside a bulky plastic power station—or relying on sewn-in USB ports on an external solar panel—keep **all power electronics inside the steel Faraday box** and leave only the **dumb MC4/XT60 solar panel** outside:
 
-### Optional DIY Alternative: Field-Serviceable VEVOR Box (~$225 – $285)
-Only build this if you specifically want **individually replaceable commodity 12V cells and MPPT** rather than an integrated unit:
-* **Case:** VEVOR `342413` (`0.565 Cu.ft`, **$40**)
-* **Batteries:** 2× **12V 10Ah LiFePO4** in parallel (**$83/pair**, 256 Wh nominal / ~210 Wh usable, dual BMS redundancy)
-* **Power Electronics:** 10A–15A MPPT (**$35–$65**), 4-way blade fuse block + master switch (**$18–$25**), 12V→USB-C PD 65W–100W panel (**$18–$25**), inline DC watt meter (**$12–$18**), Solar In (XT60) + 12V Aux In/Out (XT60/Anderson) (**$20–$30**).
+1. **Solar Panel (External):** **60W–100W folding panel** with **MC4 / XT60** output (**$90–$140**). No reliance on exposed panel USB boards.
+2. **Solar Charge Controller (Inside Steel Box):**
+   * *Optimal:* **Victron SmartSolar MPPT 75/10 or 75/15** (**~$85–$115 CAD**, ~98% efficiency, native LiFePO4).
+   * *Budget:* **Renogy Wanderer 10A PWM** (**~$28 CAD**, supports LiFePO4; ~25% lower solar harvest than MPPT).
+3. **12V Buffer Battery (Inside Steel Box or External):** **1–2× 12V 10Ah LiFePO4** (**~$42 CAD ea**) with **15A inline fuse**. *(Also works with any scavenged 12V car/tractor/marine battery).*
+4. **12V Socket + 100W USB-C PD Car Charger (Inside Steel Box):** Wire a **12V heavy-duty female cigarette socket (15A fused)** directly to the **12V battery terminals** (not the controller's `LOAD` port), and plug in a commodity **100W–130W USB-C PD car charger** (**UGREEN / Anker, ~$20–$30 CAD**; toss a $15 spare in the box). Delivers true **20V 65W+ PD** to the ThinkPad, router, and fast-charges pass-around banks in ~1.5 hrs.
+5. **Pass-Around Pocket Banks (Inside Steel Box):** **2× XTAR PB2SL** (**~$28 CAD ea**) + **4–6× Samsung 50E 21700 cells** (**~$8 CAD ea** from Canadian distributors *Involt.ca*, *Ecigarettes.ca*, or *AffordableEbikes.ca*—never Amazon/eBay for bare cells). Each pair of 50Es gives a **10,000mAh (~36 Wh) swappable USB-C PD bank** to hand out around camp.
+
+*(Plug-and-Play Convenience Alternative: **Anker SOLIX C300 DC**, ~$150–$200, 288 Wh LiFePO4, built-in 100W MPPT + 140W USB-C PD, zero AC inverter—easier out of the box, but non-repairable and too bulky for a Fat-50/40mm steel can.)*
 
 ---
 
